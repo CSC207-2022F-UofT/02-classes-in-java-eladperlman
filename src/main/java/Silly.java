@@ -142,11 +142,11 @@ public class Silly implements Comparable<Silly> {
      */
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Silly other)) {
+        if (!(o instanceof Silly)) {
             return false;
         }
 
-        // To access .name of o, we need to cast it.
+        Silly other = (Silly)o;
 
         return name.equals(other.name);
     }
